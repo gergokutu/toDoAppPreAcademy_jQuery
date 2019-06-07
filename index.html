@@ -140,21 +140,6 @@
         updateCounters();
     }
 
-// put this at the bottom of your JavaScript section
-$("form").on('submit', submitTodo);
-
-function submitTodo(event) {
-  // stop the form from doing the default action, submitting...
-  event.preventDefault();
-
-  var title = $("#new-todo").val();
-
-  createTodo(title);
-
-  $("#new-todo").val(null);
-  updateCounters();
-}
-
 function createTodo(title) {
   var checkboxId = "todo-" + nextTodoId();
 
@@ -196,3 +181,5 @@ $("#clean-up").on('click', cleanUpDoneTodos);
   </script>
 </body>
 </html>
+
+<!-- Why does it put a empty todo after a newly created one? -->
